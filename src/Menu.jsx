@@ -1,17 +1,20 @@
 import { AppBar, Toolbar, Typography, Button } from "@mui/material";
-
-function Menu({ onLogout }) {
+// Adicione 'setTelaAtiva' aqui nas chaves
+function Menu({ onLogout, setTelaAtiva }) {
     return (
-        // AppBar cria o menu superior padrão Material Design
         <AppBar position="static">
             <Toolbar>
-                {/* Título do sistema */}
-                {/* flexGrow empurra o botão para a direita */}
                 <Typography variant="h6" sx={{ flexGrow: 1 }}>
-                    Sistema de Alunos
+                    Sistema Acadêmico
                 </Typography>
-                {/* Botão de logout */}
-                {/* Chama a função que está no App.js */}
+                {/* Botão para ir ao Dashboard */}
+                <Button color="inherit" onClick={() => setTelaAtiva("dashboard")}>
+                    Dashboard
+                </Button>
+                {/* Botão para acessar a área de alunos */}
+                <Button color="inherit" onClick={() => setTelaAtiva("alunos")}>
+                    Alunos
+                </Button>
                 <Button color="inherit" onClick={onLogout}>
                     Sair
                 </Button>
