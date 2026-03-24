@@ -3,10 +3,10 @@ import { useState, useMemo } from "react";
 // createTheme: Função que define as cores e estilos do sistema
 // CssBaseline: Normaliza o CSS e aplica a cor de fundo correta (preto no dark, branco no light)
 import { ThemeProvider, createTheme, CssBaseline, Box } from "@mui/material";
-import Login from "./Login";
-import Menu from "./Menu";
-import Dashboard from "./Dashboard";
-import Alunos from "./Alunos";
+import Login from "./pages/Login";
+import Menu from "./components/Menu";
+import Dashboard from "./pages/Dashboard";
+import Alunos from "./pages/Alunos";
 function App() {
   // Estado para controlar se o utilizador passou pela tela de login
   const [logado, setLogado] = useState(false);
